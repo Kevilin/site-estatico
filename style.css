@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+  text-decoration: none;
+}
+
+
+/*---------------------Corpo------------------------*/
+
+
+body{
+  font-family: montserrat;
+  height: 100%;
+  place-items: center;
+}
+nav{
+  background: #0082e6;
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: black;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background: #1b9bff;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+section{
+  background: black no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+  background-position: center;
+  /*Imagem não ajustando no mobile, revisar*/
+}
+
+/*---------------------Rodapé------------------------*/
+
+
+footer{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #000; /*cor do rodapé*/
+}
+footer .content{
+  max-width: 1350px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .content p,a{
+  color: #fff;
+}
+footer .content .box{
+  width: 33%;
+  transition: all 0.4s ease;
+}
+footer .content .topic{
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 16px;
+
+}
+footer .content p{
+  text-align: justify;
+}
+footer .content .lower .topic{
+  margin: 24px 0 5px 0;
+}
+footer .content .lower i{
+  padding-right: 16px;
+}
+footer .content .middle{
+  padding-left: 80px;
+}
+footer .content .middle a{
+  line-height: 32px;
+}
+footer .content .right input[type="text"]{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  color: #d9d9d9;
+  background: #000;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 17px;
+  border: 2px solid #222222;
+}
+/*------------------icones--------------------*/
+.icons a{
+  background: #ecf0f3;
+  position: relative;
+  height: 60px;
+  width: 60px;
+  margin: 0 10px;
+  display: inline-flex;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: all 0.3s;
+  box-shadow: -2px -2px 5px #ffffff,
+               2px 2px 5px #ceced1;
+}
+.icons a:hover:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  background: #ecf0f3;
+  box-shadow: inset -2px -2px 5px #ffffff,
+              inset 2px 2px 5px #ceced1;
+}
+.icons a i{
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-size: 28px;
+  line-height: 60px;
+}
+.icons a:hover i{
+  transform: scale(0.9);
+}
+.icons a.fb i{
+  color: #4267B2;
+}
+.icons a.linkedin i{
+  color: #0e76a8 ;
+}
+.icons a.insta i{
+  color: #E1306C;
+}
+.icons a.git i{
+  color: #333;
+}
+/*.icons a.yt i{
+  color: #ff0000;
+}*/
+
+footer .bottom{  
+  width: 100%;
+  text-align: center; /*Altera o copyright*/
+  color: #d9d9d9;  /*cor do texto*/
+  padding: 0 40px 5px 0;
+}
+footer .bottom a{
+  color: #0e76a8; /*cor do link copyright*/
+
+}
+footer .middlebox a{
+  color: #0e76a8; /*cores dos links de "outros*/
+}
+
+footer a{
+  transition: all 0.3s ease;
+}
+footer a:hover{
+  color: #eb2f06;
+}
+@media (max-width:1100px) {
+  footer .content .middle{
+    padding-left: 50px;
+  }
+}
+@media (max-width:950px){
+  footer .content .box{
+    width: 50%;
+  }
+  .content .right{
+    margin-top: 40px;
+  }
+}
+@media (max-width:560px){
+  footer{
+    position: relative;
+  }
+  footer .content .box{
+    width: 100%;
+    margin-top: 30px;
+  }
+  footer .content .middle{
+    padding-left: 0;
+  }
+}
